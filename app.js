@@ -26,6 +26,7 @@ $(document).ready(function () {
       item = buttonsBodyparts[index].parentElement;
       if (partName === item.getAttribute("bodypart")) {
         item.classList.add("body-part-active");
+        $('.body-parts-buttons')[0].scrollTo(item.offsetLeft - (window.innerWidth - item.offsetWidth) / 2,0)
       } else {
         item.classList.remove("body-part-active");
       }
