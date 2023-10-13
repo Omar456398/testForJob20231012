@@ -1,0 +1,53 @@
+.circle-inner {
+    background-color: #d0191f;
+    pointer-events: all;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+    cursor: pointer;
+  }.circle-missing {
+    position: absolute;
+    background-color: #2099d5;
+    pointer-events: none;
+    width: 33px;
+    height: 33px;
+    border-radius: 100%;
+  }
+@keyframes circle-thropping-animation {
+  0% {
+    border-width: 1px;
+    border-color: #d0191000;
+    padding: 5px;
+    margin: 0px;
+  }
+  70% {
+    border-width: 5px;
+    border-color: #d0191fff;
+    padding: 4px;
+    margin: -3px;
+  }
+  100% {
+    border-width: 1px;
+    border-color: #d0191000;
+    padding: 5px;
+    margin: 0px;
+  }
+}
+
+.circle-thropping {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  background-color: white;
+  width: 33px;
+  height: 33px;
+  border-radius: 100%;
+  border-style: solid;
+  animation-name: circle-thropping-animation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+.visible {
+  opacity: 1;
+}
