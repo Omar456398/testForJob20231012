@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 766px) {
   .body-parts-container {
-    height: calc(13 * 150vh);
+    height: calc(12 * 150vh);
     position: relative;
   }
   .body-parts-container-inner {
@@ -129,11 +129,11 @@
     left: 0px;
   }
   .body-parts-container-inner.finished-fix {
-    top: calc(12 * 150vh);
+    top: calc(11 * 150vh);
   }
   #end-body-parts-fix {
     position: absolute;
-    top: calc(12 * 150vh);
+    top: calc(11 * 150vh);
     height: 100vh;
   }
   .body-parts-buttons {

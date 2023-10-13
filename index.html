@@ -7,8 +7,30 @@
     <script src="./jquery.scrollorama.js"></script>
   </head>
   <body>
-    <div style="height: 1000px; width: 200px">
-      <div style="height: 1000px; width: 200px" class="scrollblock"></div>
+    <div style="height: 1000px; width: 100%">
+      <div
+        style="
+          height: 1000px;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+        "
+        class="scrollblock"
+        id="parallax-pyramids-1"
+      >
+        <img
+          alt=""
+          id="pyramid1"
+          src="./imgs/shard-1.png"
+          style="top: 1100px; right: 0; position: absolute"
+        />
+        <img
+          alt=""
+          id="pyramid2"
+          src="./imgs/shard-2.png"
+          style="top: 1500px; right: 0; position: absolute"
+        />
+      </div>
     </div>
     <div class="body-parts-container">
       <div
@@ -200,8 +222,30 @@
         <div class="scrollblock" id="end-body-parts-fix"></div>
       </div>
     </div>
-    <div style="height: 1000px; width: 200px">
-      <div style="height: 1000px; width: 200px" class="scrollblock"></div>
+    <div style="height: 1000px; width: 100%">
+      <div
+        style="
+          height: 1000px;
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+        "
+        class="scrollblock"
+        id="parallax-pyramids-2"
+      >
+        <img
+          alt=""
+          id="pyramid3"
+          src="./imgs/shard-3.png"
+          style="top: 1100px; position: absolute"
+        />
+        <img
+          alt=""
+          id="pyramid4"
+          src="./imgs/shard-4.png"
+          style="top: 1500px; position: absolute"
+        />
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>

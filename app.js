@@ -56,6 +56,12 @@ $(document).ready(function () {
   buttonsBodyparts.each((index) => {
     buttonsBodyparts[index].onclick = onBodyPartClick;
   });
+  scrollorama.animate('#pyramid1',{ delay: -250, duration: 1000, property:'top', start:1100, end:-100 })
+  .animate('#pyramid2',{ delay: -300, duration: 1000, property:'top', start:1500, end:-500 });
+
+  scrollorama.animate('#pyramid3',{ delay: -250, duration: 1000, property:'top', start:1500, end:400 })
+  .animate('#pyramid4',{ delay: -300, duration: 1000, property:'top', start:1900, end:-100 });
+
   scrollorama.onBlockChange(function () {
     const blockID =
       scrollorama.settings.blocks.eq(scrollorama.blockIndex).attr("id") || "";
