@@ -10,6 +10,7 @@ jQuery.expr.filters.offscreen = function (element) {
 $(document).ready(function () {
   let scrollorama = $.scrollorama({
     blocks: ".scrollblock",
+    enablePin:false
   });
   let bodyPartName = "";
   let setBodyPart = (partName) => {
@@ -26,7 +27,10 @@ $(document).ready(function () {
       item = buttonsBodyparts[index].parentElement;
       if (partName === item.getAttribute("bodypart")) {
         item.classList.add("body-part-active");
-        $('.body-parts-buttons')[0].scrollTo(item.offsetLeft - (window.innerWidth - item.offsetWidth) / 2,0)
+        $(".body-parts-buttons")[0].scrollTo(
+          item.offsetLeft - (window.innerWidth - item.offsetWidth * 2) / 2,
+          0
+        );
       } else {
         item.classList.remove("body-part-active");
       }
@@ -34,10 +38,10 @@ $(document).ready(function () {
   };
   let onBodyPartClick = (event) => {
     const bodypart = event.target.parentElement.getAttribute("bodypart");
-    if(window.innerWidth <= 766) {
-    document.getElementById("body-part-" + bodypart).scrollIntoView();
+    if (window.innerWidth <= 766) {
+      document.getElementById("body-part-" + bodypart).scrollIntoView();
     } else {
-        setBodyPart(bodypart)
+      setBodyPart(bodypart);
     }
   };
 
