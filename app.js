@@ -10,8 +10,9 @@ jQuery.expr.filters.offscreen = function (element) {
 $(document).ready(function () {
   let scrollorama = $.scrollorama({
     blocks: ".scrollblock",
-    enablePin:false
+    enablePin: false,
   });
+  window.addEventListener("resize", scrollorama.resize);
   let bodyPartName = "";
   let setBodyPart = (partName) => {
     bodyPartName = partName;
@@ -36,6 +37,8 @@ $(document).ready(function () {
       }
     });
   };
+
+  setBodyPart('skin');
   let onBodyPartClick = (event) => {
     const bodypart = event.target.parentElement.getAttribute("bodypart");
     if (window.innerWidth <= 766) {

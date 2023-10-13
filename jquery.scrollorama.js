@@ -235,6 +235,15 @@
 		
 		
 		// PUBLIC FUNCTIONS
+		scrollorama.resize = function() {
+
+			var block;
+			for (i=0; i<blocks.length; i++) {
+		
+				block = scrollorama.settings.blocks.eq(i);
+				blocks[i].top = block.offset().top - parseInt(block.css('margin-top'), 10);
+			}
+		};
 		scrollorama.animate = function(target) {
 			var targetIndex,
 				targetBlock,
