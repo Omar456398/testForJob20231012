@@ -2,14 +2,19 @@ $(document).ready(function () {
   let scrollorama = $.scrollorama({
     blocks: ".scrollblock",
   });
-  let onBodyPartClick = (event) => {
+  let bodyPartName = ''
+  let setBodyPart = (partName) => {
+    bodyPartName = partName;
     [...document.getElementsByClassName("circle-thropping")].forEach((item) => {
-      if (event.target.parentElement.getAttribute('bodypart') === item.getAttribute('bodypart')) {
-        item.classList.add("visible");
-      } else {
-        item.classList.remove("visible");
-      }
-    });
+        if (partName === item.getAttribute('bodypart')) {
+          item.classList.add("visible");
+        } else {
+          item.classList.remove("visible");
+        }
+      });
+  } 
+  let onBodyPartClick = (event) => {
+    setBodyPart(event.target.parentElement.getAttribute('bodypart'))
   };
   $(".circle-inner").each((_) => {
     $(this).click(onBodyPartClick);
